@@ -48,6 +48,7 @@ let selector = document.querySelector(".links");
 let url = selector.innerText
 selector.innerHTML = `<a>${url}</a>`
 ```
+
 ### Задание 1.7
 В HTML-документе есть тег с классом content, внутри него есть тег <p>. Напишите скрипт, который заменит этот тег <p> на тег <b>, сохранив текст внутри этого тега.
 
@@ -55,4 +56,16 @@ selector.innerHTML = `<a>${url}</a>`
 let selector = document.querySelector(".links");
 let text = selector.innerText
 selector.innerHTML = `<b>${text}</b>`
+```
+
+### Задание 1.8
+В HTML-документе заданы элементы с числовым значением с классом price. Напишите скрипт, который считает общую сумму значений всех элементов с классом price и выводит в консоль.
+
+```javascript
+let selector = document.querySelectorAll(".price");
+let sum = 0;
+selector.forEach(el => {
+    sum += parseInt(el.innerText)
+});
+console.log(sum)
 ```

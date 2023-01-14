@@ -41,7 +41,7 @@ selector.innerText *= 2;
 ```
 
 ### Задание 1.6
-В HTML-документе есть тег <p> c классом links. Внутри этого элемента указана просто текстовая ссылка без тега <a>. Напишите скрипт, который заменит этот текст на тег <a>, а в качестве содержимого тега <a> укажет изначальный текст.
+В HTML-документе есть тег `<p>` c классом links. Внутри этого элемента указана просто текстовая ссылка без тега `<a>`. Напишите скрипт, который заменит этот текст на тег `<a>`, а в качестве содержимого тега `<a>` укажет изначальный текст.
 
 ```javascript
 let selector = document.querySelector(".links");
@@ -50,7 +50,7 @@ selector.innerHTML = `<a>${url}</a>`
 ```
 
 ### Задание 1.7
-В HTML-документе есть тег с классом content, внутри него есть тег <p>. Напишите скрипт, который заменит этот тег <p> на тег <b>, сохранив текст внутри этого тега.
+В HTML-документе есть тег с классом content, внутри него есть тег `<p>`. Напишите скрипт, который заменит этот тег `<p>` на тег `<b>`, сохранив текст внутри этого тега.
 
 ```javascript
 let selector = document.querySelector(".links");
@@ -68,4 +68,25 @@ selector.forEach(el => {
     sum += parseInt(el.innerText)
 });
 console.log(sum)
+```
+
+### Задание 1.9
+В HTML-документе заданы теги с числовым значением с классом numeric. Напишите скрипт, который оборачивает в тег `<b>` все значения тега с классом numeric, которые меньше нуля.
+
+```javascript
+let selector = document.querySelectorAll(".numeric");
+selector.forEach(el => {
+    parseInt(el.innerText) < 0 ?
+     el.innerHTML = `<b>${el.innerHTML}</b>` :
+     el
+});
+```
+
+### Задание 1.10
+Исправьте скрипт таким образом, чтобы в результате его работы в переменной result была сумма значений тегов с классом numeric.
+
+```javascript
+let result = 0;
+let elems = document.querySelectorAll(".numeric");
+elems.forEach(elem => result += +elem.innerText);
 ```

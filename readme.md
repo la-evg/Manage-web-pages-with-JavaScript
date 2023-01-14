@@ -23,3 +23,11 @@ console.log(secret.tagName.toLowerCase())
 let selector = document.querySelectorAll(".promo")
 console.log(selector.length)
 ```
+
+### Задание 1.4
+Выведите в консоль название последнего тега, у которого есть класс target.
+
+```javascript
+let selector = document.querySelectorAll(".target")
+console.log(selector[selector.length - 1].tagName.toLowerCase())
+```

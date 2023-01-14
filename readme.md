@@ -39,3 +39,12 @@ console.log(selector[selector.length - 1].tagName.toLowerCase())
 let selector = document.querySelector(".price");
 selector.innerText *= 2;
 ```
+
+### Задание 1.6
+В HTML-документе есть тег <p> c классом links. Внутри этого элемента указана просто текстовая ссылка без тега <a>. Напишите скрипт, который заменит этот текст на тег <a>, а в качестве содержимого тега <a> укажет изначальный текст.
+
+```javascript
+let selector = document.querySelector(".links");
+let url = selector.innerText
+selector.innerHTML = `<a>${url}</a>`
+```

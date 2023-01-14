@@ -111,3 +111,12 @@ let new_element = document.createElement("p")
 new_element.innerText = "Ура! Мой скрипт отработал верно!"
 document.querySelector("#root").append(new_element)
 ```
+
+### Задание 2.2
+В HTML-документе есть тег `<p>` c идентификатором `title`. Напишите скрипт, который создает новый элемент `<h2>` в переменной `new_element` с текстовым содержимым `Сегодня солнечно, минус 15` и добавляет новый элемент сразу после тега с идентификатором `title`.
+
+```javascript
+let new_element = document.createElement("p")
+new_element.innerText = "Сегодня солнечно, минус 15"
+document.querySelector("#title").insertAdjacentElement('afterend', new_element)
+```

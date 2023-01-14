@@ -31,3 +31,11 @@ console.log(selector.length)
 let selector = document.querySelectorAll(".target")
 console.log(selector[selector.length - 1].tagName.toLowerCase())
 ```
+
+### Задание 1.5
+В HTML-документе существует тег с классом price и числовым значением. Напишите скрипт, который увеличивает в теге значение цены в два раза.
+
+```javascript
+let selector = document.querySelector(".price");
+selector.innerText *= 2;
+```

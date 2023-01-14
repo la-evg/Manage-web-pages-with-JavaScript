@@ -102,3 +102,12 @@ selector.forEach(el => {
 });
 console.log(cars)
 ```
+
+### Задание 2.1
+Напишите скрипт, который создает новый элемент `<p>` в переменной new_element и добавляет его в тег с идентификатором root. Созданный тег `<p>` должен содержать в себе фразу `Ура! Мой скрипт отработал верно!`
+
+```javascript
+let new_element = document.createElement("p")
+new_element.innerText = "Ура! Мой скрипт отработал верно!"
+document.querySelector("#root").append(new_element)
+```

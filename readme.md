@@ -90,3 +90,15 @@ let result = 0;
 let elems = document.querySelectorAll(".numeric");
 elems.forEach(elem => result += +elem.innerText);
 ```
+
+### Задание 1.11
+В HTML-документе задан тег `<ul>` c классом cars. Внутри этого тега есть несколько тегов `<li>`. Реализуйте скрипт, который считывает содержимое этих элементов `<li>`, формирует из них массив и сохраняет в переменной cars.
+
+```javascript
+let selector = document.querySelectorAll(".cars>li");
+let cars = []
+selector.forEach(el => {
+    cars.push(el.innerText)
+});
+console.log(cars)
+```

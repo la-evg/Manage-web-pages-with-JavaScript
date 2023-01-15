@@ -139,3 +139,15 @@ elements.forEach(el => {
     el.classList.add("adds")  
 });
 ```
+
+### Задание 2.5
+В HTML-документе есть несколько тегов `<p>`. Напишите скрипт, который присваивает каждому тегу идентификатор — от значения `p_1` и до `p_<n>`. Тут `n` — количество параграфов.
+
+```javascript
+let new_elements = document.querySelectorAll("p");
+let i = 1;
+new_elements.forEach(el => {
+    el.id = `p_${i}`
+    i++;
+});
+```

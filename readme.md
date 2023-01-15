@@ -129,3 +129,13 @@ let new_element = document.createElement("li")
 new_element.innerText = "Велосипед"
 document.querySelector("ul").insertAdjacentElement('afterbegin', new_element)
 ```
+
+### Задание 2.4
+В HTML-документе есть несколько тегов `<div>`. Напишите скрипт, который всем тегам `<div>` добавляет класс `adds`.
+
+```javascript
+elements = document.querySelectorAll("div")
+elements.forEach(el => {
+    el.classList.add("adds")  
+});
+```

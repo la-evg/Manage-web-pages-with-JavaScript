@@ -120,3 +120,12 @@ let new_element = document.createElement("p")
 new_element.innerText = "Сегодня солнечно, минус 15"
 document.querySelector("#title").insertAdjacentElement('afterend', new_element)
 ```
+
+### Задание 2.3
+В HTML-документе задан тег `<ul>` c элементами `<li>` внутри. Напишите скрипт, который создает новый элемент `<li>` с текстовым содержимым Велосипед в переменной `new_element` и добавляет его в начало списка `<ul>`.
+
+```javascript
+let new_element = document.createElement("li")
+new_element.innerText = "Велосипед"
+document.querySelector("ul").insertAdjacentElement('afterbegin', new_element)
+```

@@ -151,3 +151,15 @@ new_elements.forEach(el => {
     i++;
 });
 ```
+
+### Задание 2.6
+В HTML-документе заданы теги `<p>`. Напишите скрипт, который удаляет теги, внутри которых хранится текстовое значение `Delete`.
+
+```javascript
+let new_elements = document.querySelectorAll("p");
+new_elements.forEach(el => {
+    if (el.innerText == "Delete"){
+        el.remove()
+    }
+});
+```

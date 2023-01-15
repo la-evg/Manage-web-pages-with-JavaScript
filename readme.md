@@ -175,3 +175,17 @@ new_elements.forEach(el => {
     }
 });
 ```
+
+### Задание 2.8
+В HTML-документе заданы два `<div>` тега с идентификаторами `div1` и `div2`. Напишите скрипт, который позволит перенести содержимое тега с идентификатором `div1` в конец тега с идентификатором `div2`.
+
+```javascript
+let div1 = document.querySelector("#div1");
+let div2 = document.querySelector("#div2")
+
+div1.childNodes.forEach(el => {
+        if (el.nodeName != "#text"){
+            div2.append(el)
+        }
+});
+```

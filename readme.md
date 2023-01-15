@@ -163,3 +163,15 @@ new_elements.forEach(el => {
     }
 });
 ```
+
+### Задание 2.7
+В скрипте объявлен массив `values`, который состоит из чисел. В HTML-документе есть множество тегов `<p>` с классом `elems`. Необходимо дописать скрипт так, чтобы он удалил все теги `<p>` с классом `elems`, значение которых входит в массив `values`.
+
+```javascript
+let new_elements = document.querySelectorAll("p");
+new_elements.forEach(el => {
+    if (values.includes(parseInt(el.innerText))){
+        el.remove()
+    }
+});
+```

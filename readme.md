@@ -199,3 +199,19 @@ let new_element = document.createElement("li")
 ulElem.append(new_element)
 console.log(ulElem.querySelectorAll("li").length)
 ```
+
+### Задание 2.10
+В скрипте объявлена переменная `values`, которая содержит массив из строк. В HTML-верстке есть два тега `<div>` с классами `div1` и `div2`. Допишите скрипт так, чтобы все теги `<p>` из тега с идентификатором `div1`, значение которого встречается в списке `values`, переместились в тег с идентификатором `div2`.
+
+```javascript
+const values = ["велосипед", "ролики", "лыжи"];
+
+let nameList = document.querySelectorAll("#div1>p")
+let div2 = document.querySelector("#div2")
+
+nameList.forEach(el => {
+    if (values.includes(el.innerText)){
+        div2.append(el)
+    }
+});
+```

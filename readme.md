@@ -189,3 +189,13 @@ div1.childNodes.forEach(el => {
         }
 });
 ```
+
+### Задание 2.9
+В HTML-документе есть тег `<ul>` c идентификатором `first`. Внутри этого тега есть теги `<li>`. Напишите скрипт, который создает новый тег `<li>` в переменной `new_element` и добавляет в элемент `<ul>` с идентификатором `first`. После добавления нового элемента выведите в консоль общее количество тегов `<li>` в теге `<ul>` с идентификатором `first`.
+
+```javascript
+let ulElem = document.querySelector("ul#first");
+let new_element = document.createElement("li")
+ulElem.append(new_element)
+console.log(ulElem.querySelectorAll("li").length)
+```

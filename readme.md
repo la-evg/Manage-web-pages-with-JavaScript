@@ -215,3 +215,16 @@ nameList.forEach(el => {
     }
 });
 ```
+
+### Задание 2.11
+В скрипте объявлена переменная `task`, в которой хранится список из строк. В HTML-верстке есть тег `<div>` с идентификатором `root`. Допишите скрипт так, чтобы на основе значений списка сформировались теги `<p>` и добавились в элемент с идентификатором `root`.
+
+```javascript
+const tasks = ["Проверить документы", "Отправить начальству", "Организовать собрание"];
+let selector = document.querySelector("#root")
+tasks.forEach(el => {
+    let pTag = document.createElement("p")
+    pTag.innerText = el;
+    selector.append(pTag)
+});
+```

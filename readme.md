@@ -228,3 +228,16 @@ tasks.forEach(el => {
     selector.append(pTag)
 });
 ```
+
+### Задание 2.12
+Напишите программу, которая считает количество `<div>`-, `<p>`- и `<h2>`-тегов и записывает его в объект `tags`, как в примере. Выведите сформированный объект в консоль.
+
+```javascript
+const tags = {}
+
+tags.div = document.querySelectorAll("div").length;
+tags.p = document.querySelectorAll("p").length;
+tags.h2 = document.querySelectorAll("h2").length;
+
+console.log(tags)
+```

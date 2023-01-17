@@ -241,3 +241,18 @@ tags.h2 = document.querySelectorAll("h2").length;
 
 console.log(tags)
 ```
+
+### Задание 2.13
+В HTML-документе есть тег `<ul>` с идентификатором `tasks`, и внутри него есть несколько тегов `<li>` с текстом. Напишите скрипт, который позволяет отсортировать элементы `<li>` в теге `<ul>` по длине содержимого.
+
+```javascript
+let tasks = document.querySelector("#tasks")
+
+let myArray = [...tasks.children].sort(function(a, b) {
+    return a.innerText.length - b.innerText.length
+});
+tasks.innerHTML = ''
+myArray.forEach(el => {
+    tasks.appendChild(el)
+});
+```

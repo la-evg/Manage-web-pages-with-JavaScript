@@ -256,3 +256,13 @@ myArray.forEach(el => {
     tasks.appendChild(el)
 });
 ```
+
+### Задание 3.1
+В HTML-документе задан тег `<div>` с идентификатором `div_elem`. Напишите скрипт, который добавит в стиль данного элемента ширину и высоту по 100 пикселей.
+
+```javascript
+const divElem = document.getElementById("div_elem");
+
+divElem.style.height = "100px"
+divElem.style.width = "100px"
+```

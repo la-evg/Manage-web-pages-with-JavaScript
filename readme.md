@@ -266,3 +266,10 @@ const divElem = document.getElementById("div_elem");
 divElem.style.height = "100px"
 divElem.style.width = "100px"
 ```
+
+### Задание 3.2
+В HTML-документе задан тег `<p>` с идентификатором `rainbow`. Напишите скрипт, который указывает в стиле синий цвет текста `(#2980b9)`.
+
+```javascript
+document.getElementById("rainbow").style.color = "#2980b9";
+```

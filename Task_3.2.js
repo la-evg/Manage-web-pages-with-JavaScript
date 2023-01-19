@@ -1,0 +1,1 @@
+document.getElementById("rainbow").style.color = "#2980b9";

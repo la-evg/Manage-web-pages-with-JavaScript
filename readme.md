@@ -280,3 +280,29 @@ document.getElementById("rainbow").style.color = "#2980b9";
 ```javascript
 document.querySelector("label").setAttribute("for", "target");
 ```
+### Задание 3.4
+В HTML-документе есть тег `<p>` c идентификатором `rainbow`. Внутри этого тега указано число. Реализуйте скрипт, который делает преобразование в зависимости от следующих условий:
+
+- Если числовое значение находится в диапазоне от 1 до 9 включительно, должно меняться значение атрибута `style`. Цвет текста — на красный (`#c0392b`).
+- Если числовое значение находится в диапазоне от 10 до 20 включительно — на коричневый (`#e17055`).
+- В ином случае — на желтый (`#fdcb6e`).
+
+```javascript
+let paragraf = document.getElementById("rainbow")
+
+function changeColor (elem) {
+    let value = parseInt(elem.innerText)
+
+    if (1 <= value && value <= 9){
+        elem.style.color = "#c0392b";
+    }
+    else if (10 <= value && value <= 20){
+        elem.style.color = "#e17055";
+    }
+    else {
+        elem.style.color = "#fdcb6e"
+    }
+}
+
+changeColor(paragraf)
+```

@@ -323,3 +323,17 @@ imgTag.style.width = '100px'
 photo.innerText = ""
 photo.append(imgTag)
 ```
+
+### Задание 3.6
+В HTML-документе задан тег `<select>` c идентификатором `numbers`. Напишите скрипт, который добавит внутрь этого тега несколько тегов `<option>` со значениями от 10 до 550 с шагом 10. Значение у тега `<option>` должно быть указано внутри и в атрибуте value.
+
+```javascript
+let select = document.querySelector("#numbers")
+
+for (i = 10; i <= 550; i += 10){
+    let option = document.createElement("option")
+    option.value = i;
+    option.innerText = i;
+    select.appendChild(option)
+}
+```

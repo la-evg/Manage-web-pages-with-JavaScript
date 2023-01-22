@@ -306,3 +306,20 @@ function changeColor (elem) {
 
 changeColor(paragraf)
 ```
+
+### Задание 3.5
+В HTML-документе есть тег `<div>` с идентификатором photo. Внутри этого тега указана ссылка на картинку. Необходимо написать скрипт, который:
+
+- заменит ссылку на тег `<img>` с этой картинкой
+- укажет размеры картинки в атрибуте `style` 100 на 100 пикселей
+
+```javascript
+let photo = document.querySelector("#photo")
+
+imgTag = document.createElement("img")
+imgTag.src = photo.innerText
+imgTag.style.height = '100px'
+imgTag.style.width = '100px'
+photo.innerText = ""
+photo.append(imgTag)
+```

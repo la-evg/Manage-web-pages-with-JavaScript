@@ -337,3 +337,19 @@ for (i = 10; i <= 550; i += 10){
     select.appendChild(option)
 }
 ```
+
+### Задание 3.7
+В HTML-документе задан тег `<select>`. В скрипте объявлена переменная `countries`, в которой указаны некоторые страны. Доработайте скрипт так, чтобы в тег `<select>` добавились теги `<option>` по одному на каждую страну из массива `countries`. В качестве значения тега `option` укажите название страны, а в качестве атрибута — `value` первые две буквы страны в нижнем регистре (маленькими буквами).
+
+```javascript
+const countries = ["Armenia", "Russia", "Germany", "France", "Georgia"];
+for (country of countries){addToSelect(country)}
+
+function addToSelect (country){
+    let select = document.querySelector(".card>select")
+    let option = document.createElement("option")
+    option.innerText = country;
+    option.value = (country[0] + country[1]).toLowerCase()
+    select.appendChild(option)
+}
+```

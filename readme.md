@@ -422,3 +422,17 @@ function changeOpacity (){
 let square = document.querySelector('#square')
 square.addEventListener('click', changeOpacity)
 ```
+
+### Задание 4.7
+В HTML-документе задан тег `<button>` с классом `copy`. Напишите скрипт, который позволит при нажатии на кнопку `<button>` создать ее копию и расположить в конце тега `body`.
+
+```javascript
+function copyElement (){
+    let newElem = document.createElement(this.tagName);
+    newElem.innerHTML = this.innerHTML
+    newElem.classList.add(this.classList)
+    document.body.append(newElem)
+}
+let button = document.querySelector('.copy')
+button.addEventListener('click', copyElement)
+```

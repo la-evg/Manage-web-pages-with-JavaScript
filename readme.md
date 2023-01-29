@@ -398,3 +398,16 @@ let button = document.querySelector('#clicker')
 button.addEventListener('click', incrimentCount)
 ```
 
+### Задание 4.5
+В HTML-документе задан тег `<button>` с идентификатором `delete` и тег `<ul>` c идентификатором `points` и c элементами `<li>` внутри. Напишите скрипт, который позволяет удалить последний элемент `<li>` в списке `<ul>` при нажатии на кнопку.
+
+```javascript
+function removeElem() {
+    let points = document.querySelector('#points')
+    points.removeChild(points.lastElementChild)
+}
+let button = document.querySelector('#delete')
+button.addEventListener('click', removeElem)
+
+```
+

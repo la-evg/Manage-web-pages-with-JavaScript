@@ -364,3 +364,15 @@ function btnClick(){
 let button = document.querySelector('#btn')
 button.addEventListener('click', btnClick)
 ```
+
+### Задание 4.2
+В HTML-документе задан тег `<button>` с идентификатором `btn` и тег `<input>` с идентификатором `val`. Напишите скрипт, который выводит в консоль значение тега `<input>` при клике на кнопку.
+
+```javascript
+function btnClick(){
+    console.log(document.querySelector('#val').value)
+}
+let button = document.querySelector('#btn')
+button.addEventListener('click', btnClick)
+```
+

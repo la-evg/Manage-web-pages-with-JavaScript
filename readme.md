@@ -353,3 +353,14 @@ function addToSelect (country){
     select.appendChild(option)
 }
 ```
+
+### Задание 4.1
+В HTML-документе задан тег `<button>` с идентификатором `btn` и тег `<p>` с идентификатором `val`. Напишите скрипт, который выводит в консоль содержимое тега `<p>` при клике на кнопку.
+
+```javascript
+function btnClick(){
+    console.log(document.querySelector('#val').innerText)
+}
+let button = document.querySelector('#btn')
+button.addEventListener('click', btnClick)
+```

@@ -387,3 +387,14 @@ let square = document.querySelector('#square')
 square.addEventListener('click', changeOpacity)
 ```
 
+### Задание 4.4
+В HTML-документе есть тег `<button>` с идентификатором `clicker`. Напишите скрипт, который добавит обработку события клика на кнопку с идентификатором `clicker`. При нажатии на кнопку число внутри тега `<button>` должно увеличиваться на один.
+
+```javascript
+function incrimentCount() {
+    this.innerText = parseInt(this.innerText) + 1;
+}
+let button = document.querySelector('#clicker')
+button.addEventListener('click', incrimentCount)
+```
+

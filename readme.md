@@ -376,3 +376,14 @@ let button = document.querySelector('#btn')
 button.addEventListener('click', btnClick)
 ```
 
+### Задание 4.3
+В HTML-документе задан тег <div> c идентификатором square. Он представляет собой синий квадрат. Напишите скрипт, который позволяет сделать <div> прозрачным (opacity: 0) при клике по нему.
+
+```javascript
+function changeOpacity (){
+    this.style.opacity = "0"
+}
+let square = document.querySelector('#square')
+square.addEventListener('click', changeOpacity)
+```
+

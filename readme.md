@@ -436,3 +436,18 @@ function copyElement (){
 let button = document.querySelector('.copy')
 button.addEventListener('click', copyElement)
 ```
+
+### Задание 4.8
+В HTML-документе есть несколько тегов `<p>`. Внутри них указаны числа. Напишите скрипт, который позволяет при нажатии на любой параграф увеличить его содержимое на единицу.
+
+```javascript
+let card = document.querySelector('.card')
+
+function incrementElement (){
+    this.innerText = parseInt(this.innerText) + 1
+}
+
+for (let p of card.children){
+    p.addEventListener('click', incrementElement)
+}
+```

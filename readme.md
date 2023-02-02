@@ -451,3 +451,26 @@ for (let p of card.children){
     p.addEventListener('click', incrementElement)
 }
 ```
+
+### Задание 4.9
+В HTML-документе есть два тега `<div>` с идентификаторами div1 и div2 с элементами `<p>` внутри. Напишите скрипт, который перемещает тег `<p>` из одного тега `<div>` в другой при клике по этому элементу `<p>`.
+
+```javascript
+let paragraf = document.querySelectorAll('p')
+
+function transferElements(){
+    let newElem = document.createElement(this.tagName);
+    newElem.innerHTML = this.innerHTML
+    console.log(newElem)
+    if (this.parentNode.id === 'div1'){
+        document.querySelector('#div2').appendChild(newElem)
+        this.remove();
+    } else if (this.parentNode.id === 'div2'){
+        document.querySelector('#div1').appendChild(newElem)
+        this.remove();
+    }
+    paragraf = document.querySelectorAll('p')
+}
+
+paragraf.forEach((elem)=>{elem.addEventListener('click', transferElements)})
+```
